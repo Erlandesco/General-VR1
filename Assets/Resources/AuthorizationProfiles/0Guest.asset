@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37600beb352815f4b972fd91cadafe30, type: 3}
+  m_Name: 0Guest
+  m_EditorClassIdentifier: 
+  roleName: Guest
+  accessLevel: 0
+  username: Guest
+  passwordHash: Guest
+  canLogin: 0
+  canActivateIsolator: 1
+  canOnOrOffElectricalPowerViableAirSampler: 0
+  canOnOrOffElectricalPowerSterilityTestPump: 0
+  canOpenOrCloceDrainValveLine: 0
+  canActivatePowerChamberLighting: 0
+  canRequestOpenChamberMainDoor: 0
+  canAlarmsAcknowledgement: 0
+  canMuteAlarm: 0
+  canViewsAlarmLogHistory: 0
+  canShutdownIsolatorSystem: 0
+  canResetEmergencyStopHMIScreen: 0
+  canAccessNavigateOperationScreen: 0
+  canStartStopChamberPressureDecayTest: 0
+  canBypassChamberPressureDecayTest: 0
+  canStartStopChamberBiodecontaminationOperation: 0
+  canBypassChamberBiodecontaminationOperation: 0
+  canAbortTheAeration: 0
+  canStartStopGloveLeakTest: 0
+  canClearGloveLeakTest: 0
+  canStartStopIsolatorNormalRun: 0
+  canAccessSettingsScreen: 0
+  canAdjustIsolatorOperatingSetpointsAndTimer: 0
+  canEnableDisableAlarms: 0
+  canChangeAlarmSetpoints: 0
+  canChangeBiodeconCycleDev: 0
+  canChangeOrStartCleanScreenAndTimer: 0
+  canOpenHMIControlPanel: 0
+  canPerformCalibrateTouch: 0
+  canAdjustScreenBrightness: 0
+  canEnableThermalPrinterFunction: 0
+  canAccessPDFViewer: 0
+  canTurnOnOrOffElectronicsLogging: 0
+  canChangeDurationForContinuousDataLoggingInterval: 0
+  canChangesettingsOnlineParticleCounter: 0
+  canOpenfilebrowser: 0
+  canTransferAllLogstoArchivePath: 0
+  canChangeDateTimeInSettingsScreen: 0
+  canAccessNavigateServiceScreen: 0
+  canForceOverrideIOs: 0
+  canAccessChangeScalingValues: 0
+  canAccessChangeClosedLoopControlsTuning: 0
+  canAccessSystemMaintenance: 0
+  canAccessDiagnosticVverview: 0
+  canAccessSystemAlarmsEvents: 0
+  canAccessRestoreFactoryDefaultSettings: 0
+  canAccessNavigateUserAdminScreen: 0
+  canUserPasswordChange: 0
+  canCreationOrDeletionAccounts: 0
+  canChangeAuthorizationLevel: 0
+  canUserChangeLogoffTime: 0
+  canAccessContactUsScreen: 0
