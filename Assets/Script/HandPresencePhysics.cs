@@ -7,7 +7,7 @@ public class HandPresencePhysics : MonoBehaviour
     public Transform target;
     private Rigidbody rb;
     public Renderer nonPhysicalHand;
-    public float showNonPhysicalHandDistance = 0.05f;
+    public float showNonPhysicalHandDistance = 0.5f;
     private Collider[] handColliders;
     // Start is called before the first frame update
     void Start()
@@ -17,16 +17,19 @@ public class HandPresencePhysics : MonoBehaviour
         
     }
 
-    public void EnableHandCollider()
+    public void EnableHandCollider(float delay)
     {
+        StartCoroutine(EnableHandColliderDelay(delay));
+
+    }
+    public IEnumerator EnableHandColliderDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
         foreach (var item in handColliders)
         {
             item.enabled = true;
         }
-    }
-    public void  EnableHandColliderDelay(float delay)
-    {
-        Invoke("EnableHandCollider", delay);
     }
 
     public void DisableHandColliider()

@@ -1030,6 +1030,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326363191}
   - component: {fileID: 8265716493313303831}
+  - component: {fileID: 395723762382925361}
   m_Layer: 0
   m_Name: coll_hands:b_r_hand
   m_TagString: Untagged
@@ -1075,6 +1076,23 @@ CapsuleCollider:
   m_Height: 0.06
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &395723762382925361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493325992151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thickness: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8265716493313303831}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8265716493325995743
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,6 +1103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326479107}
   - component: {fileID: 8265716493314548607}
+  - component: {fileID: 767963815262276804}
   m_Layer: 0
   m_Name: coll_hands:b_r_hand
   m_TagString: Untagged
@@ -1130,6 +1149,23 @@ CapsuleCollider:
   m_Height: 0.05
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &767963815262276804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493325995743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thickness: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8265716493314548607}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8265716493326000473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1140,6 +1176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326358257}
   - component: {fileID: 8265716493313296453}
+  - component: {fileID: 7713296811385936782}
   m_Layer: 0
   m_Name: hands_coll:b_r_index1
   m_TagString: Untagged
@@ -1185,6 +1222,23 @@ CapsuleCollider:
   m_Height: 0.025
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7713296811385936782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326000473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thickness: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8265716493313296453}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8265716493326002041
 GameObject:
   m_ObjectHideFlags: 0
@@ -1195,6 +1249,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326464261}
   - component: {fileID: 8265716493313281443}
+  - component: {fileID: 7522590493287060502}
   m_Layer: 0
   m_Name: coll_hands:b_r_hand
   m_TagString: Untagged
@@ -1240,6 +1295,23 @@ CapsuleCollider:
   m_Height: 0.05
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7522590493287060502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326002041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thickness: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8265716493313281443}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8265716493326002107
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,6 +1322,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326449869}
   - component: {fileID: 8265716493313287731}
+  - component: {fileID: 468235348568505696}
   m_Layer: 0
   m_Name: hands_coll:b_r_ring1
   m_TagString: Untagged
@@ -1295,6 +1368,23 @@ CapsuleCollider:
   m_Height: 0.05
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &468235348568505696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326002107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thickness: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8265716493313287731}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8265716493326004985
 GameObject:
   m_ObjectHideFlags: 0
@@ -1305,6 +1395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326463813}
   - component: {fileID: 8265716493314490395}
+  - component: {fileID: 7433113556130597309}
   m_Layer: 0
   m_Name: hands_coll:b_r_pinky2
   m_TagString: Untagged
@@ -1350,6 +1441,23 @@ CapsuleCollider:
   m_Height: 0.035
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7433113556130597309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326004985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thickness: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8265716493314490395}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8265716493326005151
 GameObject:
   m_ObjectHideFlags: 0
@@ -1360,6 +1468,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326372211}
   - component: {fileID: 8265716493314539343}
+  - component: {fileID: 8644421608516983631}
   m_Layer: 0
   m_Name: coll_hands:b_r_hand
   m_TagString: Untagged
@@ -1405,6 +1514,23 @@ CapsuleCollider:
   m_Height: 0.11
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8644421608516983631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326005151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thickness: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8265716493314539343}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8265716493326111655
 GameObject:
   m_ObjectHideFlags: 0
@@ -1415,6 +1541,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326445441}
   - component: {fileID: 8265716493314539125}
+  - component: {fileID: 5714068460972696641}
   m_Layer: 0
   m_Name: hands_coll:b_r_index2
   m_TagString: Untagged
@@ -1460,6 +1587,23 @@ CapsuleCollider:
   m_Height: 0.035
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5714068460972696641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326111655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thickness: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8265716493314539125}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8265716493326113697
 GameObject:
   m_ObjectHideFlags: 0
@@ -1470,6 +1614,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326482737}
   - component: {fileID: 8265716493314446855}
+  - component: {fileID: 8603763212117931395}
   m_Layer: 0
   m_Name: hands_coll:b_r_pinky1
   m_TagString: Untagged
@@ -1515,6 +1660,23 @@ CapsuleCollider:
   m_Height: 0.05
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8603763212117931395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326113697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thickness: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8265716493314446855}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8265716493326114565
 GameObject:
   m_ObjectHideFlags: 0
@@ -1525,6 +1687,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326373191}
   - component: {fileID: 8265716493314551409}
+  - component: {fileID: 6959231081066422982}
   m_Layer: 0
   m_Name: coll_hands:b_r_hand
   m_TagString: Untagged
@@ -1570,6 +1733,23 @@ CapsuleCollider:
   m_Height: 0.11
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6959231081066422982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326114565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thickness: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8265716493314551409}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8265716493326167451
 GameObject:
   m_ObjectHideFlags: 0
@@ -1580,6 +1760,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326428681}
   - component: {fileID: 8265716493314500183}
+  - component: {fileID: 3869543448523218816}
   m_Layer: 0
   m_Name: coll_hands:b_r_hand
   m_TagString: Untagged
@@ -1625,6 +1806,23 @@ CapsuleCollider:
   m_Height: 0.07
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3869543448523218816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326167451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thickness: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8265716493314500183}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8265716493326169667
 GameObject:
   m_ObjectHideFlags: 0
@@ -1635,6 +1833,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326424359}
   - component: {fileID: 8265716493314517757}
+  - component: {fileID: 1150747337005548280}
   m_Layer: 0
   m_Name: hands_coll:b_r_index3
   m_TagString: Untagged
@@ -1680,6 +1879,23 @@ CapsuleCollider:
   m_Height: 0.05
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1150747337005548280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326169667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thickness: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8265716493314517757}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8265716493326185271
 GameObject:
   m_ObjectHideFlags: 0
@@ -1691,6 +1907,8 @@ GameObject:
   - component: {fileID: 8265716493326425525}
   - component: {fileID: 8265716493323058707}
   - component: {fileID: 8265716493314519121}
+  - component: {fileID: 7683363716812468926}
+  - component: {fileID: 8251930894466494199}
   m_Layer: 0
   m_Name: hands_coll:b_r_pinky3
   m_TagString: Untagged
@@ -1763,6 +1981,36 @@ CapsuleCollider:
   m_Height: 0.025
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7683363716812468926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326185271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thickness: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8265716493314519121}
+  m_DistanceField: {fileID: 0}
+--- !u!114 &8251930894466494199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326185271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62359d80fdc0e4315ab6331b78ec5b90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kinematicForParticles: 0
 --- !u!1 &8265716493326187217
 GameObject:
   m_ObjectHideFlags: 0
@@ -1773,6 +2021,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326423309}
   - component: {fileID: 8265716493314552305}
+  - component: {fileID: 3738967395974020913}
   m_Layer: 0
   m_Name: coll_hands:b_r_thumb3
   m_TagString: Untagged
@@ -1818,6 +2067,23 @@ CapsuleCollider:
   m_Height: 0.025
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3738967395974020913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326187217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thickness: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8265716493314552305}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8265716493326189569
 GameObject:
   m_ObjectHideFlags: 0
@@ -1828,6 +2094,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326457327}
   - component: {fileID: 8265716493314502123}
+  - component: {fileID: 3575803463521840338}
   m_Layer: 0
   m_Name: coll_hands:b_r_hand
   m_TagString: Untagged
@@ -1873,6 +2140,23 @@ CapsuleCollider:
   m_Height: 0.07
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3575803463521840338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326189569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thickness: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8265716493314502123}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8265716493326192311
 GameObject:
   m_ObjectHideFlags: 0
@@ -1883,6 +2167,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326355561}
   - component: {fileID: 8265716493314538029}
+  - component: {fileID: 5563470842394312585}
   m_Layer: 0
   m_Name: hands_coll:b_r_ring3
   m_TagString: Untagged
@@ -1928,6 +2213,23 @@ CapsuleCollider:
   m_Height: 0.025
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5563470842394312585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326192311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thickness: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8265716493314538029}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8265716493326194883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1938,6 +2240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326478613}
   - component: {fileID: 8265716493314508211}
+  - component: {fileID: 7329770915391425354}
   m_Layer: 0
   m_Name: hands_coll:b_r_middle3
   m_TagString: Untagged
@@ -1983,6 +2286,23 @@ CapsuleCollider:
   m_Height: 0.025
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7329770915391425354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326194883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thickness: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8265716493314508211}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8265716493326196035
 GameObject:
   m_ObjectHideFlags: 0
@@ -1993,6 +2313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326473789}
   - component: {fileID: 8265716493314543325}
+  - component: {fileID: 2470466604210352165}
   m_Layer: 0
   m_Name: hands_coll:b_r_middle2
   m_TagString: Untagged
@@ -2038,6 +2359,23 @@ CapsuleCollider:
   m_Height: 0.035
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2470466604210352165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326196035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thickness: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8265716493314543325}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8265716493326203505
 GameObject:
   m_ObjectHideFlags: 0
@@ -2048,6 +2386,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326419245}
   - component: {fileID: 8265716493314519251}
+  - component: {fileID: 304175332717066139}
   m_Layer: 0
   m_Name: coll_hands:b_r_thumb1
   m_TagString: Untagged
@@ -2093,6 +2432,23 @@ CapsuleCollider:
   m_Height: 0.05
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &304175332717066139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326203505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thickness: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8265716493314519251}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8265716493326206453
 GameObject:
   m_ObjectHideFlags: 0
@@ -2103,6 +2459,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326459531}
   - component: {fileID: 8265716493314538413}
+  - component: {fileID: 2145131037463390325}
   m_Layer: 0
   m_Name: coll_hands:b_r_thumb2
   m_TagString: Untagged
@@ -2148,6 +2505,23 @@ CapsuleCollider:
   m_Height: 0.035
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2145131037463390325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326206453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thickness: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8265716493314538413}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8265716493326207357
 GameObject:
   m_ObjectHideFlags: 0
@@ -2158,6 +2532,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326482083}
   - component: {fileID: 8265716493313290855}
+  - component: {fileID: 3777208694512477591}
   m_Layer: 0
   m_Name: hands_coll:b_r_middle1
   m_TagString: Untagged
@@ -2203,6 +2578,23 @@ CapsuleCollider:
   m_Height: 0.05
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3777208694512477591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326207357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thickness: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8265716493313290855}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8265716493326209157
 GameObject:
   m_ObjectHideFlags: 0
@@ -2213,6 +2605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326420667}
   - component: {fileID: 8265716493314531977}
+  - component: {fileID: 6911504582497104237}
   m_Layer: 0
   m_Name: hands_coll:b_r_pinky0
   m_TagString: Untagged
@@ -2258,6 +2651,23 @@ CapsuleCollider:
   m_Height: 0.05
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6911504582497104237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326209157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thickness: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8265716493314531977}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8265716493326212317
 GameObject:
   m_ObjectHideFlags: 0
@@ -2268,6 +2678,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326381715}
   - component: {fileID: 8265716493314492023}
+  - component: {fileID: 1936707006085961673}
   m_Layer: 0
   m_Name: coll_hands:b_r_hand
   m_TagString: Untagged
@@ -2313,6 +2724,23 @@ CapsuleCollider:
   m_Height: 0.11
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1936707006085961673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326212317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thickness: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8265716493314492023}
+  m_DistanceField: {fileID: 0}
 --- !u!1 &8265716493326220207
 GameObject:
   m_ObjectHideFlags: 0
@@ -2323,6 +2751,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265716493326453835}
   - component: {fileID: 8265716493313297665}
+  - component: {fileID: 2594124346779140525}
   m_Layer: 0
   m_Name: hands_coll:b_r_ring2
   m_TagString: Untagged
@@ -2368,3 +2797,20 @@ CapsuleCollider:
   m_Height: 0.035
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2594124346779140525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265716493326220207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thickness: 0
+  material: {fileID: 0}
+  filter: -65535
+  m_SourceCollider: {fileID: 8265716493313297665}
+  m_DistanceField: {fileID: 0}
