@@ -4,31 +4,70 @@ using UnityEngine.UI;
 
 public class TutorialStepManager : MonoBehaviour
 {
-    public Image tutorialImage; // UI Image tempat gambar
-    public AudioSource audioSource; // Sumber audio
-    public TutorialStep[] steps; // List semua step tutorial
+    public Image tutorialImage;
+    public AudioSource audioSource;
+    public TutorialStep[] steps;
+    public GameObject audioStep;
+    public GameObject hologramScreen;
+    public GameObject iMGController;
+    public Button skipButton;
+    public GameObject mainMenu;
+
+    private Coroutine tutorialCoroutine;
+    private bool isSkipped = false;
 
     void Start()
     {
-        StartCoroutine(PlayTutorialSteps());
+        audioStep.SetActive(false);
+        mainMenu.SetActive(false);
+
+        skipButton.onClick.AddListener(SkipTutorial); // Tambahkan event listener
     }
 
-    IEnumerator PlayTutorialSteps()
+    public IEnumerator PlayTutorialSteps()
     {
+        isSkipped = false;
+        tutorialCoroutine = StartCoroutine(TutorialRoutine());
+        yield return tutorialCoroutine;
+    }
+    private IEnumerator TutorialRoutine()
+    {
+        hologramScreen.SetActive(true);
+        iMGController.SetActive(true);
+
         foreach (var step in steps)
         {
-            // Ganti gambar
-            tutorialImage.sprite = step.image;
+            if (isSkipped) yield break;
 
-            // Putar audio
+            tutorialImage.sprite = step.image;
+            audioStep.SetActive(true);
             audioSource.clip = step.audioClip;
             audioSource.Play();
 
-            // Tunggu sampai audio selesai
             yield return new WaitUntil(() => !audioSource.isPlaying);
 
-            // Optional: jeda antar step
-            yield return new WaitForSeconds(0.5f);
+            if (isSkipped) yield break;
+
+            yield return new WaitForSeconds(1f);
         }
+        mainMenu.SetActive(true);
     }
+    public void SkipTutorial()
+    {
+        isSkipped = true;
+
+        if (tutorialCoroutine != null)
+            StopCoroutine(tutorialCoroutine);
+
+        audioSource.Stop();
+        audioStep.SetActive(false);
+
+        // Arahkan ke langkah berikutnya, misalnya:
+        gameObject.SetActive(false);// Hilangkan UI tutorial
+        hologramScreen.SetActive(false);
+        iMGController.SetActive(false);
+        mainMenu.SetActive(true);
+
+    }
+
 }

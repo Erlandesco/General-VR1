@@ -11,7 +11,7 @@ public class ControllerVibration : MonoBehaviour
     public HapticImpulsePlayer rightHaptic;
     public HapticImpulsePlayer leftHaptic;
     public AudioSource tutorialAudio;
-    public GameObject stepManager;
+    public TutorialStepManager tutorialStepManager; // Tambahkan ini!
 
     void Start()
     {
@@ -20,26 +20,16 @@ public class ControllerVibration : MonoBehaviour
 
     IEnumerator PlayTutorialSequence()
     {
-        stepManager.SetActive(false);
-        // Play voiceover
         tutorialAudio.Play();
-
-        // Tunggu audio selesai
         yield return new WaitUntil(() => !tutorialAudio.isPlaying);
 
-        // Step 1: Getarkan controller kanan
         rightHaptic.SendHapticImpulse(0.7f, 0.3f);
         yield return new WaitForSeconds(1f);
 
-        // Step 2: Getarkan controller kiri
         leftHaptic.SendHapticImpulse(0.7f, 0.3f);
-
         yield return new WaitForSeconds(1f);
-        stepManager.SetActive(false);
 
-
-
-
-
+        // Baru mulai step tutorial
+        yield return StartCoroutine(tutorialStepManager.PlayTutorialSteps());
     }
 }
