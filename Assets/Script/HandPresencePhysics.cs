@@ -1,38 +1,41 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class HandPresencePhysics : MonoBehaviour
 {
     public Transform target;
-    private Rigidbody rb;
     public Renderer nonPhysicalHand;
     public float showNonPhysicalHandDistance = 0.5f;
+    public float smoothingFactor = 0.2f;
+    public float maxVelocity = 10f;
+
+    private Rigidbody rb;
     private Collider[] handColliders;
-    // Start is called before the first frame update
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        rb.interpolation = RigidbodyInterpolation.Interpolate;
+        rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
+
         handColliders = GetComponentsInChildren<Collider>();
-        
     }
 
     public void EnableHandCollider(float delay)
     {
         StartCoroutine(EnableHandColliderDelay(delay));
-
     }
-    public IEnumerator EnableHandColliderDelay(float delay)
+
+    private IEnumerator EnableHandColliderDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-
         foreach (var item in handColliders)
         {
             item.enabled = true;
         }
     }
 
-    public void DisableHandColliider()
+    public void DisableHandCollider()
     {
         foreach (var item in handColliders)
         {
@@ -40,30 +43,27 @@ public class HandPresencePhysics : MonoBehaviour
         }
     }
 
-    private void Update()
+    void Update()
     {
         float distance = Vector3.Distance(transform.position, target.position);
-
-        if (distance > showNonPhysicalHandDistance)
-        {
-            nonPhysicalHand.enabled = true;
-        }
-        else
-            nonPhysicalHand.enabled = false;
+        nonPhysicalHand.enabled = distance > showNonPhysicalHandDistance;
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
-        //position
-        rb.velocity = (target.position - transform.position) / Time.fixedDeltaTime;
+        // --- Smoothed position tracking ---
+        Vector3 desiredVelocity = (target.position - transform.position) / Time.fixedDeltaTime;
+        Vector3 smoothedVelocity = Vector3.Lerp(rb.velocity, desiredVelocity, smoothingFactor);
+        rb.velocity = Vector3.ClampMagnitude(smoothedVelocity, maxVelocity);
 
-        //rottation
+        // --- Smoothed rotation tracking ---
         Quaternion rotationDifference = target.rotation * Quaternion.Inverse(transform.rotation);
-        rotationDifference.ToAngleAxis(out float angleInDegree, out Vector3 rotationAxis);
+        rotationDifference.ToAngleAxis(out float angleInDegrees, out Vector3 rotationAxis);
 
-        Vector3 rotationDifferenceInDegree = angleInDegree * rotationAxis;
+        if (angleInDegrees > 180f)
+            angleInDegrees -= 360f;
 
-        rb.angularVelocity = (rotationDifferenceInDegree * Mathf.Deg2Rad / Time.fixedDeltaTime);
+        Vector3 angularVelocity = (rotationAxis * angleInDegrees * Mathf.Deg2Rad) / Time.fixedDeltaTime;
+        rb.angularVelocity = Vector3.Lerp(rb.angularVelocity, angularVelocity, smoothingFactor);
     }
 }
