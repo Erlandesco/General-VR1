@@ -11,6 +11,11 @@ public class TutorialScrewTracker : MonoBehaviour
     public GameObject helpStep9;
     public GloveHelpAnimation gloveHelp;
 
+    private void Start()
+    {
+        helpStep9.SetActive(false);
+    }
+
     void Awake()
     {
         instance = this;
