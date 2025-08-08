@@ -1,29 +1,52 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SwitchRotator : MonoBehaviour
 {
-    public float onThreshold = 30f;   // Rotasi X minimum untuk dianggap ON
-    public float offThreshold = 10f;  // Rotasi X maksimum untuk dianggap OFF
+    // Rotasi untuk posisi "OFF"
+    public Vector3 offRotation = new Vector3(0, 0, 0);
+
+    // Rotasi untuk posisi "ON"
+    public Vector3 onRotation = new Vector3(0, 90, 0);
+
+    // Kecepatan putaran
+    public float rotationSpeed = 5f;
+
+    // Status sakelar saat ini
     private bool isOn = false;
+
+    // Rotasi target
+    private Quaternion targetRotation;
+
+    void Start()
+    {
+        // Atur rotasi awal sesuai dengan posisi OFF
+        targetRotation = Quaternion.Euler(offRotation);
+        transform.localRotation = targetRotation;
+    }
 
     void Update()
     {
-        float xRotation = transform.localEulerAngles.x;
+        // Gerakkan rotasi objek secara bertahap menuju target
+        transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, Time.deltaTime * rotationSpeed);
+    }
 
-        // Menyesuaikan nilai rotasi agar bisa deteksi antara 0-180 (hindari 360 wrap)
-        if (xRotation > 180) xRotation -= 360;
+    // Fungsi ini dipanggil dari controller VR untuk memutar sakelar
+    public void ToggleSwitch()
+    {
+        isOn = !isOn; // Balik status on/off
 
-        if (!isOn && xRotation > onThreshold)
+        // Jika ON, atur rotasi target ke posisi ON
+        if (isOn)
         {
-            isOn = true;
-            Debug.Log("Switch ON");
-            // Tambahkan logika saat ON di sini
+            targetRotation = Quaternion.Euler(onRotation);
+            Debug.Log("Sakelar ON"); // Anda bisa ganti dengan kode untuk menyalakan mesin
         }
-        else if (isOn && xRotation < offThreshold)
+        // Jika OFF, atur rotasi target ke posisi OFF
+        else
         {
-            isOn = false;
-            Debug.Log("Switch OFF");
-            // Tambahkan logika saat OFF di sini
+            targetRotation = Quaternion.Euler(offRotation);
+            Debug.Log("Sakelar OFF"); // Anda bisa ganti dengan kode untuk mematikan mesin
         }
     }
 }
