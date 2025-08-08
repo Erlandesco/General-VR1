@@ -9,6 +9,7 @@ TagManager:
   - LeftHand
   - RightHand
   - Tools
+  - OnOff
   layers:
   - Default
   - TransparentFX
