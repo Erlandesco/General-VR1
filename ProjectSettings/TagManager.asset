@@ -10,6 +10,7 @@ TagManager:
   - RightHand
   - Tools
   - OnOff
+  - Kenop
   layers:
   - Default
   - TransparentFX
