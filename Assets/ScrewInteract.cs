@@ -15,7 +15,8 @@ public class ScrewInteract : MonoBehaviour
             if (visualScrew) visualScrew.SetActive(false); // sembunyikan baut
             gameObject.GetComponent<Collider>().enabled = false;
 
-            TutorialScrewTracker.instance.UnscrewOne();
+            if (TutorialScrewTracker.instance != null)
+                TutorialScrewTracker.instance.UnscrewOne();
         }
     }
 }

@@ -14,6 +14,7 @@ public class TrigerToLowerDownGloves : MonoBehaviour
     public InputActionReference trigerAction;
     public GameObject step10HelpUI;
     public GameObject step11HelpUI;
+    public GameObject triggerSelfObject;
     public XRGrabInteractable grabNewGloves;
 
     void Update()
@@ -25,6 +26,7 @@ public class TrigerToLowerDownGloves : MonoBehaviour
             grabNewGloves.enabled = true;
             step10HelpUI.SetActive(false);
             step11HelpUI.SetActive(true);
+            triggerSelfObject.SetActive(true);
         }
         
     }
