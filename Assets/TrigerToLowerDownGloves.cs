@@ -10,12 +10,8 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 public class TrigerToLowerDownGloves : MonoBehaviour
 {
     [SerializeField] private bool isPlayerInZone = false;
-    [SerializeField] private bool isLowerDownGloves = false;
+    [SerializeField] public bool isLowerDownGloves = false;
     public InputActionReference trigerAction;
-    public GameObject step10HelpUI;
-    public GameObject step11HelpUI;
-    public GameObject triggerSelfObject;
-    public XRGrabInteractable grabNewGloves;
 
     void Update()
     {
@@ -23,10 +19,6 @@ public class TrigerToLowerDownGloves : MonoBehaviour
         {
             isLowerDownGloves = true;
             Debug.Log("Old Gloves Has Been Lower Down ");
-            grabNewGloves.enabled = true;
-            step10HelpUI.SetActive(false);
-            step11HelpUI.SetActive(true);
-            triggerSelfObject.SetActive(true);
         }
         
     }

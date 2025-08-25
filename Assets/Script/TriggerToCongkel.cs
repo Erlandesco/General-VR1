@@ -27,6 +27,7 @@ public class TriggerToCongkel : MonoBehaviour
             isDone = true;
 
             Debug.Log("Trigger ditekan, karet aktif.");
+            //Destroy(, 3);
         }
     }
 
