@@ -1,24 +1,9 @@
 fileFormatVersion: 2
-guid: 263f82efd7f32400fa932f91a5a218b4
+guid: 6dfcf48f2c1004117936f5484b0b3fa6
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: GLASS
-    second: {fileID: 2100000, guid: 5b69aa69e6da1bf4bb7a75ce5380f51e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: IBS_Albedo
-    second: {fileID: 2100000, guid: 2f2ee4d2ec6bc5b48b66858e149958a1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: IBS_SCREEN
-    second: {fileID: 2100000, guid: b80a2f6a41486af48a89117c30f87440, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -1,50 +1,79 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class DualHandTrigger : MonoBehaviour
 {
-    [Header("Refs")]
-    public Animator animator; // drag animator yg punya animasi
-    public string animationTriggerName = "PlayAnim"; // nama trigger di animator
+    [Header("Animator")]
+    public Animator animator;
+    public string openTriggerName = "Open";
+    public string closeTriggerName = "Close";
 
     [Header("Tags")]
     public string rightHandTag = "RightHand";
     public string leftHandTag = "LeftHand";
 
-    private bool rightInside = false;
-    private bool leftInside = false;
+    [Header("Glove")]
+    public GameObject gloveOpen;
+    public GameObject gloveClose;
 
-    // trigger kanan
-    public void RightHandEnter()
-    {
-        rightInside = true;
-        CheckBothHands();
-    }
+    // state sensor
+    bool rightInside = false;
+    bool leftInside = false;
 
-    public void RightHandExit()
-    {
-        rightInside = false;
-    }
+    // state pintu
+    bool isOpen = false;
 
-    // trigger kiri
-    public void LeftHandEnter()
-    {
-        leftInside = true;
-        CheckBothHands();
-    }
+    // edge/latch
+    bool bothInsideLastFrame = false; // untuk deteksi rising-edge
+    bool armed = true;                // toggle hanya boleh saat sudah "armed"
 
-    public void LeftHandExit()
-    {
-        leftInside = false;
-    }
+    // dipanggil dari HandTrigger (sensor kanan/kiri)
+    public void RightHandEnter() { rightInside = true; TryUpdate(); }
+    public void RightHandExit() { rightInside = false; TryUpdate(); }
+    public void LeftHandEnter() { leftInside = true; TryUpdate(); }
+    public void LeftHandExit() { leftInside = false; TryUpdate(); }
 
-    void CheckBothHands()
+    void TryUpdate()
     {
-        if (rightInside && leftInside)
+        bool bothInsideNow = rightInside && leftInside;
+
+        // Detect "rising edge": sebelumnya tidak lengkap -> sekarang lengkap
+        if (!bothInsideLastFrame && bothInsideNow)
         {
-            Debug.Log("Kedua tangan masuk, mainkan animasi");
-            animator.Play(animationTriggerName);
+            if (armed)
+            {
+                ToggleDoor();
+                armed = false; // jangan toggle lagi selama masih lengkap
+            }
+        }
+
+        // Re-arm ketika tidak lengkap (salah satu keluar)
+        if (!bothInsideNow)
+            armed = true;
+
+        bothInsideLastFrame = bothInsideNow;
+    }
+
+    void ToggleDoor()
+    {
+        isOpen = !isOpen;
+        if (isOpen)
+        {
+            //animator.ResetTrigger(closeTriggerName);
+            animator.Play(openTriggerName);
+            gloveOpen.SetActive(true);
+            gloveClose.SetActive(false);
+            Debug.Log("TOGGLE: OPEN");
+        }
+        else
+        {
+            //animator.ResetTrigger(openTriggerName);
+            animator.Play(closeTriggerName);
+            gloveOpen.SetActive(false);
+            gloveClose.SetActive(true);
+            Debug.Log("TOGGLE: CLOSE");
         }
     }
 }
