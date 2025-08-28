@@ -71,8 +71,8 @@ public class DualHandTrigger : MonoBehaviour
         {
             //animator.ResetTrigger(openTriggerName);
             animator.Play(closeTriggerName);
-            gloveOpen.SetActive(false);
-            gloveClose.SetActive(true);
+            //gloveOpen.SetActive(false);
+            //gloveClose.SetActive(true);
             Debug.Log("TOGGLE: CLOSE");
         }
     }
