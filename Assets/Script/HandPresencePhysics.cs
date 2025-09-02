@@ -51,19 +51,28 @@ public class HandPresencePhysics : MonoBehaviour
 
     void FixedUpdate()
     {
-        // --- Smoothed position tracking ---
-        Vector3 desiredVelocity = (target.position - transform.position) / Time.fixedDeltaTime;
-        Vector3 smoothedVelocity = Vector3.Lerp(rb.velocity, desiredVelocity, smoothingFactor);
-        rb.velocity = Vector3.ClampMagnitude(smoothedVelocity, maxVelocity);
+        rb.velocity = (target.position - transform.position) / Time.fixedDeltaTime;
 
-        // --- Smoothed rotation tracking ---
         Quaternion rotationDifference = target.rotation * Quaternion.Inverse(transform.rotation);
-        rotationDifference.ToAngleAxis(out float angleInDegrees, out Vector3 rotationAxis);
+        rotationDifference.ToAngleAxis(out float angleInDegree, out Vector3 rotationAxis);
 
-        if (angleInDegrees > 180f)
-            angleInDegrees -= 360f;
+        Vector3 rotationDifferenceInDegree = angleInDegree * rotationAxis;
 
-        Vector3 angularVelocity = (rotationAxis * angleInDegrees * Mathf.Deg2Rad) / Time.fixedDeltaTime;
-        rb.angularVelocity = Vector3.Lerp(rb.angularVelocity, angularVelocity, smoothingFactor);
+        rb.angularVelocity = (rotationDifferenceInDegree * Mathf.Deg2Rad / Time.fixedDeltaTime);
+
+        //// --- Smoothed position tracking ---
+        //Vector3 desiredVelocity = (target.position - transform.position) / Time.fixedDeltaTime;
+        //Vector3 smoothedVelocity = Vector3.Lerp(rb.velocity, desiredVelocity, smoothingFactor);
+        //rb.velocity = Vector3.ClampMagnitude(smoothedVelocity, maxVelocity);
+
+        //// --- Smoothed rotation tracking ---
+        //Quaternion rotationDifference = target.rotation * Quaternion.Inverse(transform.rotation);
+        //rotationDifference.ToAngleAxis(out float angleInDegrees, out Vector3 rotationAxis);
+
+        //if (angleInDegrees > 180f)
+        //    angleInDegrees -= 360f;
+
+        //Vector3 angularVelocity = (rotationAxis * angleInDegrees * Mathf.Deg2Rad) / Time.fixedDeltaTime;
+        //rb.angularVelocity = Vector3.Lerp(rb.angularVelocity, angularVelocity, smoothingFactor);
     }
 }

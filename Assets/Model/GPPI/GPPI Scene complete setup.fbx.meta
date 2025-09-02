@@ -3,7 +3,82 @@ guid: 316fa47281835415a97f62bb0e3ede0d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: bbf4f9a48a410864d85d03d4c3cb8a1d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HMI Border
+    second: {fileID: 2100000, guid: eb7a8974454e12243852524ce13f2bc0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Latex OLD
+    second: {fileID: 2100000, guid: 0fe7f0071bc2f474eaf3b34b33530b59, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SS
+    second: {fileID: 2100000, guid: a88ecee4a8064a6439eae35e552dc03c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SS accent
+    second: {fileID: 2100000, guid: 395019565f15640479be9f7c64f24cf5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Screen
+    second: {fileID: 2100000, guid: ab356513204021442babc86ad2226924, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: black
+    second: {fileID: 2100000, guid: a009cad2defacb74a9dc779a9f02cc4c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blue cap
+    second: {fileID: 2100000, guid: c9f1288d926cdfe4fbf6abf8d7cd0d67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass bottle
+    second: {fileID: 2100000, guid: 3a3d8b3ff29fe084090afb643ab7781f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: green light
+    second: {fileID: 2100000, guid: a1bd4b9ecfec3d640a73dfb4a3cee5c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: red
+    second: {fileID: 2100000, guid: a386dbc77bf57d84596a22387affd9fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: red light
+    second: {fileID: 2100000, guid: 65e71c4205db5614a978a0d04625b552, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: white plastic
+    second: {fileID: 2100000, guid: 7391294bd9cd9694892080e9de00ac44, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: yellow
+    second: {fileID: 2100000, guid: af10874802927bd48ba4c078e7c871af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: yellow light
+    second: {fileID: 2100000, guid: 35217589f8b4f73489b45b83dbac7cf0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
