@@ -11,6 +11,7 @@ TagManager:
   - Tools
   - OnOff
   - Kenop
+  - AllenTip
   layers:
   - Default
   - TransparentFX
