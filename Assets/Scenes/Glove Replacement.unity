@@ -7034,59 +7034,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25a07ef133a37d140a87cdf1f1c75fdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &290572074
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 290572075}
-  - component: {fileID: 290572076}
-  m_Layer: 0
-  m_Name: Tool Tip
-  m_TagString: AllenTip
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &290572075
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 290572074}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.000006, z: -0.000056}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1846835653}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &290572076
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 290572074}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Radius: 0.00008469931
-  m_Center: {x: 0, y: 0, z: -0.00007469935}
 --- !u!1 &306472170 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 316fa47281835415a97f62bb0e3ede0d, type: 3}
@@ -13126,7 +13073,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 771345628}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -14266,7 +14213,7 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  toolTip: {fileID: 290572075}
+  toolTip: {fileID: 0}
   localAxis: {x: 0, y: 0, z: 1}
   requiredTurns: 3
   requireActivatePress: 0
@@ -15865,7 +15812,7 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  toolTip: {fileID: 290572075}
+  toolTip: {fileID: 0}
   localAxis: {x: 0, y: 0, z: 1}
   requiredTurns: 3
   requireActivatePress: 0
@@ -24535,7 +24482,7 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  toolTip: {fileID: 290572075}
+  toolTip: {fileID: 0}
   localAxis: {x: 0, y: 0, z: 1}
   requiredTurns: 3
   requireActivatePress: 0
@@ -37206,9 +37153,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: dda718d60a528432b8a25764f96553aa, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1010115290}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: dda718d60a528432b8a25764f96553aa, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 290572075}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dda718d60a528432b8a25764f96553aa, type: 3}
       insertIndex: -1
