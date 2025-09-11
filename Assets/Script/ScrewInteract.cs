@@ -12,7 +12,7 @@ public class ScrewInteract : MonoBehaviour
         if (other.CompareTag("Tools"))
         {
             isUnscrewed = true;
-            if (visualScrew) visualScrew.SetActive(false); // sembunyikan baut
+            //if (visualScrew) visualScrew.SetActive(false); // sembunyikan baut
             gameObject.GetComponent<Collider>().enabled = false;
 
             if (TutorialScrewTracker.instance != null)

@@ -33,7 +33,7 @@ public class TutorialScrewTracker : MonoBehaviour
 
         if (unscrewedCount >= totalScrews)
         {
-            Debug.Log("All screws removed.");
+            Debug.Log("All BOLTS HAVE BEEN LOOSENED");
             // Optional: bisa nyalakan highlight cover, sfx, dsb
         }
     }
