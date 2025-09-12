@@ -13,7 +13,7 @@ public class ScrewInteract : MonoBehaviour
         {
             isUnscrewed = true;
             //if (visualScrew) visualScrew.SetActive(false); // sembunyikan baut
-            gameObject.GetComponent<Collider>().enabled = false;
+            //gameObject.GetComponent<Collider>().enabled = false;
 
             if (TutorialScrewTracker.instance != null)
                 TutorialScrewTracker.instance.UnscrewOne();
