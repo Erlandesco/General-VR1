@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.17282498, g: 0.21597023, b: 0.2979182, a: 1}
+  m_IndirectSpecularColor: {r: 0.17278561, g: 0.21591772, b: 0.29786545, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -21298,6 +21298,7 @@ GameObject:
   - component: {fileID: 1567694510}
   - component: {fileID: 1567694511}
   - component: {fileID: 1567694512}
+  - component: {fileID: 1567694513}
   m_Layer: 0
   m_Name: Script Manager
   m_TagString: Untagged
@@ -21351,6 +21352,29 @@ MonoBehaviour:
   crossFade: 0.05
   gloveOpen: {fileID: 336021513}
   gloveClose: {fileID: 1421316583297964474}
+--- !u!114 &1567694513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567694508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db79dec3d08c84933b3b60b588c45b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fixCamera: 1
+  clearFlags: 1
+  cullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  clearUrpStack: 1
+  overrideLighting: 1
+  skybox: {fileID: 0}
+  fogEnabled: 0
+  ambientIntensity: 1
+  reflectionIntensity: 1
 --- !u!1 &1570112816
 GameObject:
   m_ObjectHideFlags: 0
@@ -40547,7 +40571,6 @@ GameObject:
   - component: {fileID: 8653094250231139726}
   - component: {fileID: 9192515260563251806}
   - component: {fileID: 2659189100687390272}
-  - component: {fileID: 9192515260563251807}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -49061,18 +49084,6 @@ MonoBehaviour:
       m_Action: Rotation
       m_Flags: 0
     m_Flags: 0
---- !u!114 &9192515260563251807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6921084011039625570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7bb9fb4e998a194eaee6afda503b59c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &9198998195344870009
 RectTransform:
   m_ObjectHideFlags: 0
