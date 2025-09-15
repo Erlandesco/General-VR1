@@ -15,6 +15,11 @@ MonoBehaviour:
   welcomeScreenVersion: '1.9.9 '
   playmakerVersion: 
   showWelcomeScreen: 1
+<<<<<<< Updated upstream
   showUpgradeGuide: 0
   lastAutoUpdateSignature: 2022.3.20f1__/Users/erland/General-VR/Assets__0.0.0.0
+=======
+  showUpgradeGuide: 1
+  lastAutoUpdateSignature: 2022.3.20f1__D:/Clone Git/General-VR1/Assets__0.0.0.0
+>>>>>>> Stashed changes
   useLegacyNetworking: 0

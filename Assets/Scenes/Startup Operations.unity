@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.17278561, g: 0.21591772, b: 0.29786545, a: 1}
+  m_IndirectSpecularColor: {r: 0.17282498, g: 0.21597023, b: 0.2979182, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8675,7 +8675,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &480835077
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11729,7 +11729,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &806809200
 Transform:
   m_ObjectHideFlags: 0
@@ -14576,7 +14576,7 @@ Transform:
   m_GameObject: {fileID: 1087584992}
   serializedVersion: 2
   m_LocalRotation: {x: -0.71789956, y: -0, z: -0, w: 0.69614667}
-  m_LocalPosition: {x: 1.053, y: 0.715, z: -4.026}
+  m_LocalPosition: {x: 1.053, y: 0.793, z: -3.7545}
   m_LocalScale: {x: 0.23102, y: 0.23102, z: 0.23102}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20508,7 +20508,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.19405773, y: 0.37992707, z: -1.1120362}
+  m_ConnectedAnchor: {x: 0.19405773, y: 1.769927, z: -1.1120362}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -20856,8 +20856,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -21786,8 +21786,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -22648,8 +22648,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -31044,7 +31044,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3621981465878948959
 Transform:
   m_ObjectHideFlags: 0
@@ -31093,7 +31093,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3621981466517380070
 Transform:
   m_ObjectHideFlags: 0
@@ -35840,7 +35840,7 @@ Transform:
   m_GameObject: {fileID: 3910127356925468732}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071067, y: 0.00000009415696, z: -0.00000009415697, w: 0.7071068}
-  m_LocalPosition: {x: 0.812, y: 1.601, z: 6.6248574}
+  m_LocalPosition: {x: 0.413, y: 1.601, z: 5.816}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -38147,8 +38147,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
