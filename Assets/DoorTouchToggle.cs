@@ -22,7 +22,7 @@ public class DoorTouchToggle : MonoBehaviour
 
     // state
     private Quaternion baseLocalRot;    // referensi pose dasar
-    private bool isOpen = false;        // pintu sedang terbuka?
+    [HideInInspector]public bool isOpen = false;        // pintu sedang terbuka?
     private bool armed = true;          // harus keluar dulu sebelum boleh toggle lagi
     private Coroutine rotCo;
 
