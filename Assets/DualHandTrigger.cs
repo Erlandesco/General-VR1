@@ -21,7 +21,7 @@ public class DualHandTrigger : MonoBehaviour
     bool leftInside = false;
 
     // pintu state
-    bool isOpen = false;
+    [HideInInspector] public bool isOpen = false;
 
     // anti-spam
     bool bothInsideLast = false;   // rising-edge detector
