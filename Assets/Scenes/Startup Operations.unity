@@ -33794,16 +33794,18 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.SetProperty
         - HutongGames.PlayMaker.Actions.GetProperty
         - HutongGames.PlayMaker.Actions.IntCompare
+        - HutongGames.PlayMaker.Actions.Wait
         customNames:
         - 
         - 
         - 
         - 
         - 
-        actionEnabled: 0000010101
-        actionIsOpen: 0000010101
-        actionStartIndex: 00000000050000000a0000000c0000000e000000
-        actionHashCodes: b2cf1000b2cf10005ac852045ac8520409faa102
+        - 
+        actionEnabled: 000001010101
+        actionIsOpen: 000001010101
+        actionStartIndex: 00000000050000000a0000000c0000000e00000014000000
+        actionHashCodes: b2cf1000b2cf10005ac852045ac8520409faa10248c01101
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -34099,7 +34101,13 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 20
         fsmIntParams:
         - useVariable: 1
           name: Checklist Presure DecayTest
@@ -34147,12 +34155,13 @@ MonoBehaviour:
         - Active Button To Decay
         - 
         - 
-        byteData: 00000000010101
+        - Active Button To Decay
+        byteData: 0000000001010101
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1400000011000000110000000100000001000000140000001100000011000000010000000100000024000000010000002400000001000000100000001000000017000000170000001700000001000000
+        paramDataType: 14000000110000001100000001000000010000001400000011000000110000000100000001000000240000000100000024000000010000001000000010000000170000001700000017000000010000000f0000001700000001000000
         paramName:
         - gameObject
         - activate
@@ -34174,8 +34183,11 @@ MonoBehaviour:
         - lessThan
         - greaterThan
         - everyFrame
-        paramDataPos: 0000000000000000010000000000000001000000010000000200000003000000020000000300000000000000040000000100000005000000000000000100000000000000010000000200000006000000
-        paramByteDataSize: 0000000000000000000000000100000001000000000000000000000000000000010000000100000000000000010000000000000001000000000000000000000000000000000000000000000001000000
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 0000000000000000010000000000000001000000010000000200000003000000020000000300000000000000040000000100000005000000000000000100000000000000010000000200000006000000000000000300000007000000
+        paramByteDataSize: 0000000000000000000000000100000001000000000000000000000000000000010000000100000000000000010000000000000001000000000000000000000000000000000000000000000001000000000000000000000001000000
     - name: State 4
       description: 
       colorIndex: 0
@@ -34203,14 +34215,16 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.ActivateGameObject
         - HutongGames.PlayMaker.Actions.GetProperty
         - HutongGames.PlayMaker.Actions.IntCompare
+        - HutongGames.PlayMaker.Actions.Wait
         customNames:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000500000007000000
-        actionHashCodes: b2cf10005ac8520409faa102
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 0000000005000000070000000d000000
+        actionHashCodes: b2cf10005ac8520409faa10248c01101
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -34365,7 +34379,13 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 20
         fsmIntParams:
         - useVariable: 1
           name: isPressureDecay Activ
@@ -34401,12 +34421,13 @@ MonoBehaviour:
         - Matikan Lampu dan Mulai Inject Pressure
         - 
         - 
-        byteData: 00000101
+        - Matikan Lampu dan Mulai Inject Pressure
+        byteData: 0000010101
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000110000001100000001000000010000002400000001000000100000001000000017000000170000001700000001000000
+        paramDataType: 140000001100000011000000010000000100000024000000010000001000000010000000170000001700000017000000010000000f0000001700000001000000
         paramName:
         - gameObject
         - activate
@@ -34421,8 +34442,11 @@ MonoBehaviour:
         - lessThan
         - greaterThan
         - everyFrame
-        paramDataPos: 00000000000000000100000000000000010000000000000002000000000000000100000000000000010000000200000003000000
-        paramByteDataSize: 00000000000000000000000001000000010000000000000001000000000000000000000000000000000000000000000001000000
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 00000000000000000100000000000000010000000000000002000000000000000100000000000000010000000200000003000000000000000300000004000000
+        paramByteDataSize: 00000000000000000000000001000000010000000000000001000000000000000000000000000000000000000000000001000000000000000000000001000000
     - name: State 5
       description: 
       colorIndex: 0
@@ -36399,7 +36423,7 @@ MonoBehaviour:
     dataVersion: 2
     usedInTemplate: {fileID: 0}
     name: 2.0 Alur BioDecontamination Cycle
-    startState: State 1
+    startState: State 11
     states:
     - name: State 1
       description: 
@@ -36407,7 +36431,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 50
-        y: 100
+        y: 148
         width: 150
         height: 32
       isBreakpoint: 0
@@ -36764,7 +36788,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 258
-        y: 97
+        y: 145
         width: 100
         height: 32
       isBreakpoint: 0
@@ -37120,7 +37144,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 415
-        y: 97
+        y: 145
         width: 163
         height: 32
       isBreakpoint: 0
@@ -37340,7 +37364,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 631
-        y: 108
+        y: 156
         width: 100
         height: 32
       isBreakpoint: 0
@@ -37366,6 +37390,7 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.EnableFSM
         - HutongGames.PlayMaker.Actions.EnableFSM
         - HutongGames.PlayMaker.Actions.EnableFSM
+        - HutongGames.PlayMaker.Actions.Wait
         customNames:
         - 
         - 
@@ -37375,10 +37400,11 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 0101010101010101
-        actionIsOpen: 0000010100000000
-        actionStartIndex: 000000000200000004000000060000000c000000100000001400000018000000
-        actionHashCodes: 5ac852045ac852045ac8520409faa10287aa970087aa970087aa970087aa9700
+        - 
+        actionEnabled: 010101010101010101
+        actionIsOpen: 000001010000000001
+        actionStartIndex: 000000000200000004000000060000000c0000001000000014000000180000001c000000
+        actionHashCodes: 5ac852045ac852045ac8520409faa10287aa970087aa970087aa970087aa970048c01101
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -37845,7 +37871,13 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 15
         fsmIntParams:
         - useVariable: 1
           name: Active Bio Decontamination
@@ -37917,12 +37949,13 @@ MonoBehaviour:
         - Finish
         - 
         - 
-        byteData: 00000101
+        - Finish
+        byteData: 0000010101
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 24000000010000002400000001000000240000000100000010000000100000001700000017000000170000000100000014000000120000001100000011000000140000001200000011000000110000001400000012000000110000001100000014000000120000001100000011000000
+        paramDataType: 240000000100000024000000010000002400000001000000100000001000000017000000170000001700000001000000140000001200000011000000110000001400000012000000110000001100000014000000120000001100000011000000140000001200000011000000110000000f0000001700000001000000
         paramName:
         - targetProperty
         - everyFrame
@@ -37952,15 +37985,18 @@ MonoBehaviour:
         - fsmName
         - enable
         - resetOnExit
-        paramDataPos: 00000000000000000100000001000000020000000200000000000000010000000000000001000000020000000300000000000000000000000000000001000000010000000100000002000000030000000200000002000000040000000500000003000000030000000600000007000000
-        paramByteDataSize: 00000000010000000000000001000000000000000100000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 00000000000000000100000001000000020000000200000000000000010000000000000001000000020000000300000000000000000000000000000001000000010000000100000002000000030000000200000002000000040000000500000003000000030000000600000007000000000000000300000004000000
+        paramByteDataSize: 00000000010000000000000001000000000000000100000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
     - name: State 5
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 767
-        y: 95
+        y: 143
         width: 100
         height: 32
       isBreakpoint: 0
@@ -38305,7 +38341,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 791.0156
-        y: 156.02344
+        y: 204.02344
         width: 100
         height: 32
       isBreakpoint: 0
@@ -38704,7 +38740,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 582
-        y: 184.00781
+        y: 232.00781
         width: 100
         height: 32
       isBreakpoint: 0
@@ -39060,7 +39096,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 448
-        y: 195
+        y: 243
         width: 100
         height: 32
       isBreakpoint: 0
@@ -39416,7 +39452,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 299.8125
-        y: 203
+        y: 251
         width: 100
         height: 16
       isBreakpoint: 0
@@ -39740,7 +39776,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 689
-        y: 223
+        y: 271
         width: 100
         height: 32
       isBreakpoint: 0
@@ -39954,6 +39990,79 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 0000000000000000000000000100000000000000010000000200000001000000
         paramByteDataSize: 0000000001000000000000000000000000000000000000000000000001000000
+    - name: State 11
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 61
+        y: 99
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: Kebuka
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: State 1
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Wait
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 48c01101
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 5
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - Kebuka
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0f0000001700000001000000
+        paramName:
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 000000000000000000000000
+        paramByteDataSize: 000000000000000001000000
     events:
     - name: Open Chamber Inner
       isSystemEvent: 0
