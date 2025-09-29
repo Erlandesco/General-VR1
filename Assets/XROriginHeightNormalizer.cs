@@ -27,11 +27,15 @@ public class XROriginHeightNormalizer : MonoBehaviour
 
     void Start()
     {
-        if (TrySetFloor())
-            return;
+       if (TrySetFloor())
+            //return;
 
         if (autoCalibrateOnStart)
             CalibrateNow();
+    }
+    private void Update()
+    {
+      //  CalibrateNow();
     }
 
     bool TrySetFloor()

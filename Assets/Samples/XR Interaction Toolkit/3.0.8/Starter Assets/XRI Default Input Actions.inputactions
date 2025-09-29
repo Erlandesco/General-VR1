@@ -984,6 +984,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Tombol X",
+                    "type": "Button",
+                    "id": "6ef06108-db93-40f1-a953-4a21471b77c7",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1281,6 +1290,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Tombol Y",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "429e8ebc-c42c-4bba-937a-2b3438d3e02e",
+                    "path": "<XRController>{LeftHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Tombol X",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "22c8b29f-3614-469b-99e7-27b23f789cdc",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Tombol X",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
