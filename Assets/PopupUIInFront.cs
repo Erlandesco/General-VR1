@@ -8,26 +8,28 @@ public class PopupUIInFront : MonoBehaviour
     [Header("References")]
     public Camera xrCamera;                       // drag Main Camera (XR)
     public Canvas popupCanvas;                    // Canvas (World Space)
-    public CanvasGroup canvasGroup;               // untuk fade (opsional tapi disarankan)
+    public CanvasGroup canvasGroup;               // untuk fade (opsional)
     public InputActionReference toggleAction;     // binding ke tombol X (Left / North)
 
     [Header("Placement")]
-    [Tooltip("Jarak dari user ke UI (meter).")]
     public float spawnDistance = 1.5f;
-    [Tooltip("Offset tinggi dari posisi mata.")]
     public float heightOffset = -0.05f;
-    [Tooltip("Clamp kemiringan supaya selalu sejajar lantai.")]
     public bool flattenForward = true;
 
     [Header("Auto Hide")]
-    [Tooltip("UI akan hilang jika idle selama detik ini.")]
     public float autoHideDelay = 4.0f;
     public bool fadeWhenHiding = true;
     public float fadeDuration = 0.15f;
 
+    [Header("Audio")]
+    public AudioSource audioSource;               // TARUH DI MAIN CAMERA / OBJEK YANG TIDAK DI-DISABLE
+    public AudioClip sfxOpen;
+    public AudioClip sfxClose;
+    [Range(0f, 1f)] public float sfxVolume = 1f;
+    public bool sfx2D = true;                     // 2D biar konsisten di telinga
+
     bool visible;
     float lastInteractionTime;
-    float fadeVel;
 
     void Reset()
     {
@@ -40,6 +42,19 @@ public class PopupUIInFront : MonoBehaviour
     {
         if (popupCanvas != null) popupCanvas.enabled = false;
         if (canvasGroup != null) canvasGroup.alpha = 0f;
+
+        // Siapkan AudioSource kalau belum di-assign
+        if (!audioSource)
+        {
+            var cam = Camera.main;
+            if (cam)
+                audioSource = cam.GetComponent<AudioSource>() ?? cam.gameObject.AddComponent<AudioSource>();
+        }
+        if (audioSource)
+        {
+            audioSource.playOnAwake = false;
+            audioSource.spatialBlend = sfx2D ? 0f : 1f;
+        }
     }
 
     void OnEnable()
@@ -70,7 +85,7 @@ public class PopupUIInFront : MonoBehaviour
             Hide();
         }
 
-        // (Opsional) Jaga selalu menghadap user tanpa geser posisi
+        // Jaga selalu menghadap user
         if (xrCamera && popupCanvas)
         {
             Vector3 toCam = xrCamera.transform.position - popupCanvas.transform.position;
@@ -106,11 +121,10 @@ public class PopupUIInFront : MonoBehaviour
         lastInteractionTime = Time.time;
         popupCanvas.enabled = true;
 
-        if (canvasGroup)
-        {
-            StopAllCoroutines();
-            canvasGroup.alpha = 1f; // cepat tampil; kalau mau fade-in, buat coroutine sendiri
-        }
+        if (canvasGroup) { StopAllCoroutines(); canvasGroup.alpha = 1f; }
+
+        // >>> PLAY SFX OPEN
+        PlaySFX(sfxOpen);
     }
 
     public void Hide()
@@ -119,6 +133,9 @@ public class PopupUIInFront : MonoBehaviour
 
         visible = false;
         lastInteractionTime = 0f;
+
+        // >>> PLAY SFX CLOSE (sebelum Canvas dimatikan)
+        PlaySFX(sfxClose);
 
         if (canvasGroup && fadeWhenHiding && fadeDuration > 0f)
         {
@@ -146,9 +163,13 @@ public class PopupUIInFront : MonoBehaviour
         popupCanvas.enabled = false;
     }
 
-    // ==== Panggil ini dari event UI (OnClick / OnPointerEnter / OnValueChanged) ====
-    public void NotifyInteracted()
+    // Panggil dari event UI (OnClick / OnPointerEnter / OnValueChanged) agar idle reset
+    public void NotifyInteracted() => lastInteractionTime = Time.time;
+
+    // ---------- AUDIO HELPER ----------
+    void PlaySFX(AudioClip clip)
     {
-        lastInteractionTime = Time.time;
+        if (clip == null || audioSource == null) return;
+        audioSource.PlayOneShot(clip, sfxVolume);
     }
 }
