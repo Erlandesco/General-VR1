@@ -94,7 +94,7 @@ public class UIRayFeedback : MonoBehaviour
     private void OnAnyButtonHover(BaseEventData _)
     {
         if (hoverClip && audioSource) audioSource.PlayOneShot(hoverClip, volume);
-        Pulse(hand, hoverAmplitude, hoverDuration);
+        //Pulse(hand, hoverAmplitude, hoverDuration);
     }
 
     // ------- Helpers -------
