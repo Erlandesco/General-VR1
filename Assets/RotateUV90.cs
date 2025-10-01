@@ -4,27 +4,24 @@ using UnityEngine;
 [RequireComponent(typeof(MeshFilter))]
 public class RotateUV90 : MonoBehaviour
 {
-    public bool clockwise = true;
+    public bool clockwise = true; // true = searah jarum jam
 
-    void Reset() { Apply(); }
-    [ContextMenu("Apply UV 90°")]
-    public void Apply()
+    void Awake()
     {
         var mf = GetComponent<MeshFilter>();
-        var mesh = mf.sharedMesh;
+        var mesh = mf.mesh;                // instance, bukan asset
+        if (!mesh || mesh.uv == null) { Destroy(this); return; }
+
         var uvs = mesh.uv;
         for (int i = 0; i < uvs.Length; i++)
         {
-            // geser ke pusat
-            Vector2 uv = uvs[i] - new Vector2(0.5f, 0.5f);
-            // rotasi 90° (cw/ccw)
-            uv = clockwise ? new Vector2(uv.y, -uv.x) : new Vector2(-uv.y, uv.x);
-            // geser balik
-            uvs[i] = uv + new Vector2(0.5f, 0.5f);
+            var uv = uvs[i] - new Vector2(0.5f, 0.5f);
+            uvs[i] = clockwise
+                ? new Vector2(uv.y, -uv.x) + new Vector2(0.5f, 0.5f)
+                : new Vector2(-uv.y, uv.x) + new Vector2(0.5f, 0.5f);
         }
         mesh.uv = uvs;
-#if UNITY_EDITOR
-        UnityEditor.EditorUtility.SetDirty(mesh);
-#endif
+
+        Destroy(this); // sudah apply, komponen dibuang
     }
 }
