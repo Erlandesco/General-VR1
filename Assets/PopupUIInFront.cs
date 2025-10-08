@@ -7,7 +7,9 @@ public class PopupUIInFront : MonoBehaviour
 {
     [Header("References")]
     public Camera xrCamera;                       // drag Main Camera (XR)
-    public Canvas popupCanvas;                    // Canvas (World Space)
+    public Canvas menuCanvas;                    // Canvas (World Space)
+    public GameObject xHintcanvas;                  // Canvas (World Space)
+    public GameObject yHintcanvas;
     public CanvasGroup canvasGroup;               // untuk fade (opsional)
     public InputActionReference toggleAction;     // binding ke tombol X (Left / North)
 
@@ -34,13 +36,18 @@ public class PopupUIInFront : MonoBehaviour
     void Reset()
     {
         xrCamera = Camera.main;
-        popupCanvas = GetComponentInChildren<Canvas>();
+        menuCanvas = GetComponentInChildren<Canvas>();
         canvasGroup = GetComponentInChildren<CanvasGroup>();
     }
 
     void Awake()
     {
-        if (popupCanvas != null) popupCanvas.enabled = false;
+        if (menuCanvas != null)
+        {
+            menuCanvas.enabled = false;
+            xHintcanvas.SetActive(true);
+            yHintcanvas.SetActive(true);
+        } ;
         if (canvasGroup != null) canvasGroup.alpha = 0f;
 
         // Siapkan AudioSource kalau belum di-assign
@@ -77,7 +84,7 @@ public class PopupUIInFront : MonoBehaviour
 
     void Update()
     {
-        if (!visible) return;
+        if (!visible) return;   
 
         // Auto-hide bila idle
         if (Time.time - lastInteractionTime > autoHideDelay)
@@ -86,12 +93,12 @@ public class PopupUIInFront : MonoBehaviour
         }
 
         // Jaga selalu menghadap user
-        if (xrCamera && popupCanvas)
+        if (xrCamera && menuCanvas)
         {
-            Vector3 toCam = xrCamera.transform.position - popupCanvas.transform.position;
+            Vector3 toCam = xrCamera.transform.position - menuCanvas.transform.position;
             if (flattenForward) toCam.y = 0f;
             if (toCam.sqrMagnitude > 0.0001f)
-                popupCanvas.transform.rotation = Quaternion.LookRotation(-toCam.normalized, Vector3.up);
+                menuCanvas.transform.rotation = Quaternion.LookRotation(-toCam.normalized, Vector3.up);
         }
     }
 
@@ -103,7 +110,7 @@ public class PopupUIInFront : MonoBehaviour
 
     public void Show()
     {
-        if (!xrCamera || !popupCanvas) return;
+        if (!xrCamera || !menuCanvas) return;
 
         // Posisi di depan kamera pada jarak tertentu
         Vector3 fwd = xrCamera.transform.forward;
@@ -113,13 +120,15 @@ public class PopupUIInFront : MonoBehaviour
         Vector3 pos = xrCamera.transform.position + fwd * spawnDistance;
         pos.y = xrCamera.transform.position.y + heightOffset;
 
-        popupCanvas.transform.position = pos;
-        popupCanvas.transform.rotation = Quaternion.LookRotation(-fwd, Vector3.up);
+        menuCanvas.transform.position = pos;
+        menuCanvas.transform.rotation = Quaternion.LookRotation(-fwd, Vector3.up);
 
         // Tampilkan
         visible = true;
         lastInteractionTime = Time.time;
-        popupCanvas.enabled = true;
+        menuCanvas.enabled = true;
+        xHintcanvas.SetActive(false);
+        yHintcanvas.SetActive(false);
 
         if (canvasGroup) { StopAllCoroutines(); canvasGroup.alpha = 1f; }
 
@@ -129,7 +138,7 @@ public class PopupUIInFront : MonoBehaviour
 
     public void Hide()
     {
-        if (!popupCanvas) return;
+        if (!menuCanvas) return;
 
         visible = false;
         lastInteractionTime = 0f;
@@ -144,7 +153,9 @@ public class PopupUIInFront : MonoBehaviour
         }
         else
         {
-            popupCanvas.enabled = false;
+            menuCanvas.enabled = false;
+            xHintcanvas.SetActive(true);
+            yHintcanvas.SetActive(true);
             if (canvasGroup) canvasGroup.alpha = 0f;
         }
     }
@@ -160,7 +171,9 @@ public class PopupUIInFront : MonoBehaviour
             yield return null;
         }
         canvasGroup.alpha = 0f;
-        popupCanvas.enabled = false;
+        menuCanvas.enabled = false;
+        xHintcanvas.SetActive(true);
+        yHintcanvas.SetActive(true);
     }
 
     // Panggil dari event UI (OnClick / OnPointerEnter / OnValueChanged) agar idle reset

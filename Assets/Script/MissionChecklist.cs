@@ -7,6 +7,8 @@ public class MissionChecklist_XRIT : MonoBehaviour
 {
     [Header("UI")]
     public GameObject missionUI;
+    public GameObject yHintUI; // canvas hint tombol Y
+    public GameObject xHintUI; // canvas hint tombol X
     public Transform leftHandAnchor;
 
     [Header("XR")]
@@ -55,7 +57,12 @@ public class MissionChecklist_XRIT : MonoBehaviour
 
     void Awake()
     {
-        if (missionUI != null) missionUI.SetActive(false);
+        if (missionUI != null)
+        {
+            missionUI.SetActive(false);
+            yHintUI.SetActive(true);
+            xHintUI.SetActive(true);
+        }
     }
 
     void OnEnable()
@@ -113,6 +120,8 @@ public class MissionChecklist_XRIT : MonoBehaviour
     {
         uiActive = !uiActive;
         missionUI.SetActive(uiActive);
+        yHintUI.SetActive(!uiActive);
+        xHintUI.SetActive(!uiActive);
 
         if (uiActive)
         {
@@ -149,13 +158,13 @@ public class MissionChecklist_XRIT : MonoBehaviour
 
     private void PlaySFX(AudioClip clip)
     {
-        if (audioSource && clip) 
+        if (audioSource && clip)
             audioSource.PlayOneShot(clip);
     }
 
     private void PulseHaptics(float amplitude, float duration)
     {
-        if(leftHandHaptic != null)
-        leftHandHaptic.SendHapticImpulse(amplitude, duration);
+        if (leftHandHaptic != null)
+            leftHandHaptic.SendHapticImpulse(amplitude, duration);
     }
 }

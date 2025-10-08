@@ -986,9 +986,36 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Tombol Y Touch",
+                    "type": "Button",
+                    "id": "1e1c11f5-7a74-4ada-bd0c-8a7a794e73e7",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Tombol X",
                     "type": "Button",
                     "id": "6ef06108-db93-40f1-a953-4a21471b77c7",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Tombol X Touch",
+                    "type": "Button",
+                    "id": "b3f10e19-e6e7-4a6b-8a42-03868ecb469c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Thumbstik",
+                    "type": "Button",
+                    "id": "6ac3b4c6-8aa8-4115-8234-5d0382ca04fa",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -1295,6 +1322,17 @@
                 },
                 {
                     "name": "",
+                    "id": "0d92a830-5c08-4731-aa5d-e503ad38325d",
+                    "path": "<OculusTouchController>{LeftHand}/secondaryTouched",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Tombol Y Touch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "429e8ebc-c42c-4bba-937a-2b3438d3e02e",
                     "path": "<XRController>{LeftHand}/{PrimaryButton}",
                     "interactions": "",
@@ -1306,12 +1344,23 @@
                 },
                 {
                     "name": "",
-                    "id": "22c8b29f-3614-469b-99e7-27b23f789cdc",
-                    "path": "",
+                    "id": "bf1814e2-d437-4494-b82d-7a99e510ce3e",
+                    "path": "<XRController>{LeftHand}/{PrimaryTouch}",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Tombol X",
+                    "action": "Tombol X Touch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5bee7f02-94f6-42be-9633-48ca29108b75",
+                    "path": "<XRController>{LeftHand}/{Primary2DAxisTouch}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Thumbstik",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -2097,6 +2146,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Tombol B",
+                    "type": "Button",
+                    "id": "d55fa0d1-e905-4ccd-943b-3e4c10017553",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Tombol A",
+                    "type": "Button",
+                    "id": "046fd0d0-e2ef-465b-b1b6-0a09e3dc3431",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -2383,6 +2450,28 @@
                     "processors": "ScaleVector2(x=0),StickDeadzone",
                     "groups": "",
                     "action": "Translate Manipulation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e883057b-c76a-4f7a-abeb-a19e530ff5c8",
+                    "path": "<XRController>{RightHand}/{SecondaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Tombol B",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d6ab257e-7999-4776-984f-269b86bf4c72",
+                    "path": "<XRController>{RightHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Tombol A",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
