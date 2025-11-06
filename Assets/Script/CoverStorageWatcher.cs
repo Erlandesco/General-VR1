@@ -10,7 +10,7 @@ public class CoverStorageWatcher : MonoBehaviour
     public XRSocketInteractor coverStorageSocket;
 
     [Header("State")]
-    public bool coverStored = false;   // akan true ketika cover sudah disocket
+    public bool gCMSocket = false;   // akan true ketika cover sudah disocket
 
     void OnEnable()
     {
@@ -32,13 +32,13 @@ public class CoverStorageWatcher : MonoBehaviour
 
     void OnCoverStored(SelectEnterEventArgs _)
     {
-        coverStored = true;
+        gCMSocket = false;
         // Debug.Log("Cover disimpan di socket.");
     }
 
     void OnCoverRemoved(SelectExitEventArgs _)
     {
-        coverStored = false;
+        gCMSocket = true;
         // kalau mau: kunci lagi O-Ring ketika cover diambil kembali
     }
 }

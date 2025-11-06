@@ -42,13 +42,13 @@ public class ORingGateFilter : MonoBehaviour, IXRSelectFilter, IXRHoverFilter
     public bool Process(IXRHoverInteractor interactor, IXRHoverInteractable target)
     {
         if (!blockHoverUntilReady) return true;
-        return coverWatcher == null || coverWatcher.coverStored;
+        return coverWatcher == null || coverWatcher.gCMSocket;
     }
 
     // SELECT: tolak grab + warning + (opsional) haptic
     public bool Process(IXRSelectInteractor interactor, IXRSelectInteractable target)
     {
-        bool ready = coverWatcher == null || coverWatcher.coverStored;
+        bool ready = coverWatcher == null || coverWatcher.gCMSocket;
         if (ready) return true;
 
         // tampilkan warning kalau kamu punya sistem warning

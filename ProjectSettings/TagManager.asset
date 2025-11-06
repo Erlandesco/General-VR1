@@ -12,6 +12,9 @@ TagManager:
   - OnOff
   - Kenop
   - AllenTip
+  - Ground
+  - TableSave
+  - NewGlove
   layers:
   - Default
   - TransparentFX
@@ -27,7 +30,7 @@ TagManager:
   - UI No Physics
   - Teleporter
   - Ini harusnya ga render lighting
-  - 
+  - Ground
   - 
   - 
   - 

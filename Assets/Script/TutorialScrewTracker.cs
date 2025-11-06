@@ -11,11 +11,17 @@ public class TutorialScrewTracker : MonoBehaviour
 
     [Header("Refs")]
     public XRGrabInteractable gloveCover;   // drag cover di sini
-    public TextMeshProUGUI screwCounterText; // “Screws removed: X / N”
+    public GameObject bolt1;
+    public GameObject bolt2;
+    public GameObject bolt3;
+    public GameObject bolt4;
+    public TextMeshProUGUI labelMisionUpdate; // “Screws removed: X / N”
     public GameObject warningPanel;         // panel/teks peringatan (inactive default)
+    public GameObject checkMarkMission;
     public float warningDuration = 2f;      // detik
 
-    [HideInInspector]public int unscrewedCount = 0;
+    [Header("Ouput")]
+    public int unscrewedCount = 0;
     private Coroutine warningCo;
 
     void Awake()
@@ -34,7 +40,21 @@ public class TutorialScrewTracker : MonoBehaviour
         if (unscrewedCount >= totalScrews)
         {
             Debug.Log("All BOLTS HAVE BEEN LOOSENED");
+            checkMarkMission.SetActive(true);
+            StartCoroutine(NonactiveBolt());
+
             // Optional: bisa nyalakan highlight cover, sfx, dsb
+        }
+        if (unscrewedCount == totalScrews)
+        {
+            StartCoroutine(NonactiveBolt());
+
+            bolt1.SetActive(false);
+            bolt2.SetActive(false);
+            bolt3.SetActive(false);
+            bolt4.SetActive(false);
+
+
         }
     }
 
@@ -45,8 +65,8 @@ public class TutorialScrewTracker : MonoBehaviour
 
     private void UpdateCounterUI()
     {
-        if (screwCounterText != null)
-            screwCounterText.text = $"Screws removed: {unscrewedCount} / {totalScrews}";
+        if (labelMisionUpdate != null)
+            labelMisionUpdate.text = $"Unscrew the bolt glove cover {unscrewedCount} / {totalScrews}";
     }
 
     public void ShowWarning(string msg)
@@ -65,5 +85,15 @@ public class TutorialScrewTracker : MonoBehaviour
         warningPanel.SetActive(true);
         yield return new WaitForSeconds(warningDuration);
         warningPanel.SetActive(false);
+    }
+
+    private System.Collections.IEnumerator NonactiveBolt()
+    {
+        yield return new WaitForSeconds(2f);
+        bolt1.SetActive(false);
+        bolt2.SetActive(false);
+        bolt3.SetActive(false);
+        bolt4.SetActive(false);
+
     }
 }

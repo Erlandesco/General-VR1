@@ -1,16 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
-public class DoorTouchToggle : MonoBehaviour
+public class DoorTouchToggleH2O2: MonoBehaviour
 {
     [Header("Door")]
     public Transform door;                 // drag daun pintu (pivot di engsel)
+    public XRSocketInteractor h202Socket;    // drag socket H2O2 di pint
     public Vector3 localAxis = Vector3.up; // sumbu rotasi lokal pintu (Y=vertikal utk pintu biasa)
     [Tooltip("Sudut tertutup relatif base rot (derajat)")]
     public float closedAngle = 0f;
     [Tooltip("Sudut terbuka relatif base rot (derajat)")]
     public float openAngle = 90f;
+    
 
     [Header("Anim")]
     public float duration = 0.4f;
@@ -30,6 +33,10 @@ public class DoorTouchToggle : MonoBehaviour
     {
         if (door == null) door = transform; // fallback
         baseLocalRot = door.localRotation;
+    }
+    private void Start()
+    {
+       h202Socket.enabled = false; // nonaktifkan socket di awal
     }
 
     void OnTriggerEnter(Collider other)
@@ -55,9 +62,16 @@ public class DoorTouchToggle : MonoBehaviour
     {
         isOpen = !isOpen;
         Quaternion target = GetTargetRotation(isOpen);
+        ActiveH202Socket();
 
         if (rotCo != null) StopCoroutine(rotCo);
         rotCo = StartCoroutine(RotateTo(target));
+    }
+
+    void ActiveH202Socket()
+    {
+        if (isOpen) h202Socket.enabled = true;
+        else h202Socket.enabled = false;
     }
 
     Quaternion GetTargetRotation(bool open)

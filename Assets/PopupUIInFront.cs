@@ -9,7 +9,7 @@ public class PopupUIInFront : MonoBehaviour
     public Camera xrCamera;                       // drag Main Camera (XR)
     public Canvas menuCanvas;                    // Canvas (World Space)
     public GameObject xHintcanvas;                  // Canvas (World Space)
-    public GameObject yHintcanvas;
+    //public GameObject yHintcanvas;
     public CanvasGroup canvasGroup;               // untuk fade (opsional)
     public InputActionReference toggleAction;     // binding ke tombol X (Left / North)
 
@@ -30,7 +30,7 @@ public class PopupUIInFront : MonoBehaviour
     [Range(0f, 1f)] public float sfxVolume = 1f;
     public bool sfx2D = true;                     // 2D biar konsisten di telinga
 
-    bool visible;
+    [Header ("Output")] public bool visible;
     float lastInteractionTime;
 
     void Reset()
@@ -46,7 +46,7 @@ public class PopupUIInFront : MonoBehaviour
         {
             menuCanvas.enabled = false;
             xHintcanvas.SetActive(true);
-            yHintcanvas.SetActive(true);
+            //yHintcanvas.SetActive(true);
         } ;
         if (canvasGroup != null) canvasGroup.alpha = 0f;
 
@@ -128,7 +128,7 @@ public class PopupUIInFront : MonoBehaviour
         lastInteractionTime = Time.time;
         menuCanvas.enabled = true;
         xHintcanvas.SetActive(false);
-        yHintcanvas.SetActive(false);
+        //yHintcanvas.SetActive(false);
 
         if (canvasGroup) { StopAllCoroutines(); canvasGroup.alpha = 1f; }
 
@@ -155,7 +155,7 @@ public class PopupUIInFront : MonoBehaviour
         {
             menuCanvas.enabled = false;
             xHintcanvas.SetActive(true);
-            yHintcanvas.SetActive(true);
+            //yHintcanvas.SetActive(true);
             if (canvasGroup) canvasGroup.alpha = 0f;
         }
     }
@@ -173,7 +173,7 @@ public class PopupUIInFront : MonoBehaviour
         canvasGroup.alpha = 0f;
         menuCanvas.enabled = false;
         xHintcanvas.SetActive(true);
-        yHintcanvas.SetActive(true);
+        //yHintcanvas.SetActive(true);
     }
 
     // Panggil dari event UI (OnClick / OnPointerEnter / OnValueChanged) agar idle reset

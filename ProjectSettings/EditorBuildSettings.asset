@@ -5,15 +5,21 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Main Menu.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
-    path: Assets/Scenes/Glove Replacement.unity
-    guid: a05709048e9ec4e769c61cb9e5d8ba71
   - enabled: 1
-    path: Assets/Scenes/E_Startup Operations.unity
+    path: Assets/Samples/XR Interaction Toolkit/3.0.8/Starter Assets/DemoScene GloveSaveChanges.unity
+    guid: 3f3de1808c300914d81c7f075a62ccf7
+  - enabled: 1
+    path: Assets/Scenes/E_GloveSaveChanges.unity
+    guid: b068666446cb7fe43ba02e2a5e03847c
+  - enabled: 0
+    path: Assets/Samples/XR Interaction Toolkit/3.0.8/Starter Assets/DemoScene Editable.unity
+    guid: 8f2e9cd9175bf424983388b3151a02ba
+  - enabled: 0
+    path: Assets/Scenes/E_PressureDecayTest.unity
     guid: 7a4646efa70e34783a517ee9d24aabf3
+  - enabled: 0
+    path: Assets/Scenes/E_BioDecontamination.unity
+    guid: a940eaec5c426124ead0ade8eb85ee16
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 9bf0026585dcc4413a8b3cbf1680a4f8, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: de1db81b7621649818b51ef7a577d392, type: 2}

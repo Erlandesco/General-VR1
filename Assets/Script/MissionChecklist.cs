@@ -8,7 +8,7 @@ public class MissionChecklist_XRIT : MonoBehaviour
     [Header("UI")]
     public GameObject missionUI;
     public GameObject yHintUI; // canvas hint tombol Y
-    public GameObject xHintUI; // canvas hint tombol X
+    //public GameObject xHintUI; // canvas hint tombol X
     public Transform leftHandAnchor;
 
     [Header("XR")]
@@ -40,7 +40,7 @@ public class MissionChecklist_XRIT : MonoBehaviour
 
     float targetThumb, targetIndex, targetMiddle, targetRing, targetPinky;
 
-    private bool uiActive;
+    [Header ("Output")] public bool uiActive;
 
     void Update()
     {
@@ -61,7 +61,7 @@ public class MissionChecklist_XRIT : MonoBehaviour
         {
             missionUI.SetActive(false);
             yHintUI.SetActive(true);
-            xHintUI.SetActive(true);
+            //xHintUI.SetActive(true);
         }
     }
 
@@ -121,7 +121,7 @@ public class MissionChecklist_XRIT : MonoBehaviour
         uiActive = !uiActive;
         missionUI.SetActive(uiActive);
         yHintUI.SetActive(!uiActive);
-        xHintUI.SetActive(!uiActive);
+        //xHintUI.SetActive(!uiActive);
 
         if (uiActive)
         {
