@@ -7891,7 +7891,7 @@ MonoBehaviour:
   spawnDistance: 1.5
   heightOffset: -0.05
   flattenForward: 1
-  autoHideDelay: 4
+  autoHideDelay: 10
   fadeWhenHiding: 1
   fadeDuration: 0.15
   audioSource: {fileID: 945933170}
